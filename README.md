@@ -1,5 +1,10 @@
 # rally-samples
 ## rally install (and apache2)
+
+* http://rally.readthedocs.io/en/latest/tutorial/step_0_installation.html
+* http://rally.readthedocs.io/en/latest/plugin/plugin_reference.html
+* https://github.com/openstack/rally/tree/master/samples/tasks/scenarios
+
 ### pre req:
 * small instance : debian OK
 * internet acces for rally installation (cf config tinyproxy)
