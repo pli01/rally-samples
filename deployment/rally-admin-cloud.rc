@@ -1,0 +1,14 @@
+{
+    "type": "ExistingCloud",
+    "auth_url": "https://identity.api.cloud.fr/v2.0",
+    "region_name": "regionOne",
+    "endpoint_type": "public",
+    "admin": {
+        "username": "admin",
+        "password": "PASSWORD",
+        "tenant_name": "admin"
+    },
+    "https_insecure": true,
+    "https_cacert": ""
+}
+
