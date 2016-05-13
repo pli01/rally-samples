@@ -10,6 +10,7 @@ rally deployment use ${CLOUD}
 # task
 rally task start ${TASK}
 
+UUID=$(rally task status | awk ' /Task/ { print $2 } ' |sed -e 's/://')
 # output reports
-( cd /var/www/html/ && rally task report $(rally task status | awk ' /Task/ { print $2 } ' |sed -e 's/://') --html-static --out output-${TIME}.html )
+( cd /var/www/html/ && rally task report $UUID --html-static --out output-${CLOUD}-${UUID}-${TIME}.html )
 
