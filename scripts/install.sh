@@ -17,5 +17,5 @@ curl https://raw.githubusercontent.com/openstack/rally/master/install_rally.sh >
 [ -z "$https_proxy" ] || perl -pi -e 's/pip install/pip install --proxy=\$https_proxy/' install_rally.sh
 
 # launch install
-/root/install_rally.sh -p /usr/bin/python3
+bash /root/install_rally.sh -p /usr/bin/python3
 
