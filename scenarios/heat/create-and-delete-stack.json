@@ -1,0 +1,22 @@
+{
+    "HeatStacks.create_and_delete_stack": [
+        {
+            "args": {
+                "template_path": "templates/mini-net/heat-no-volume.yaml",
+                "parameters": {
+                    "image_id": "9223fce1-a268-497a-9634-cd93d3c0207e",
+                    "public_net": "1c57683b-8395-4093-8c49-743ce8ee67f7",
+                    "flavor": "standard.xsmall",
+                    "key_name": "rally-key",
+                    "dns_nameservers": [ '10.1.1.1', '10.1.1.2' ]
+                }
+            },
+            "runner": {
+                "type": "constant",
+                "times": 10,
+                "concurrency": 2
+            },
+            "context": {}
+        }
+    ]
+}
