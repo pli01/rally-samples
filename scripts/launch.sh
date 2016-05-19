@@ -1,6 +1,6 @@
 #!/bin/bash
 CLOUD=${1:-my_cloud}
-TASK=${2:-/root/rally.git/samples/tasks/scenarios/nova/boot-and-delete.json}
+TASK=${2:-scenarios/nova/boot-and-delete.json}
 TIME=$(date  +%Y%m%d-%H%M%S)
 
 test -f /var/www/html/index.html && rm -rf /var/www/html/index.html
