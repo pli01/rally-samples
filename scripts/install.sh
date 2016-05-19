@@ -18,7 +18,7 @@ fi
 # install debian pre req
 pkg_list="libssl-dev libffi-dev python-dev libxml2-dev libxslt1-dev libpq-dev python-virtualenv build-essential apache2"
 
-if dpkg -l $pkg_list ; then
+if ! dpkg -p $pkg_list ; then
   sudo apt-get -qqy install $pkg_list
 fi
 
