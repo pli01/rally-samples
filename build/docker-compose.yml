@@ -1,0 +1,32 @@
+version: '2'
+# define network
+networks:
+  front:
+    driver_opts:
+      com.docker.network.enable_ipv6: "false"
+      com.docker.network.enable_ipv4: "true"
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.19.0.0/16
+          ip_range: 172.19.10.0/24
+#
+# define services
+services:
+ front:
+  build: .
+  hostname: front
+  environment:
+    - PROJECT
+    - DEBUG
+  image: myrally:latest
+  entrypoint:
+    - /run.sh
+    - /bin/sleep
+    - "1000000"
+  volumes:
+    - ../:/data/
+
+  networks:
+      front:
+#        ipv4_address: 172.19.1.10
